@@ -45,13 +45,16 @@ const Register = () => {
 
   const handleChange = (e) => {
     e.preventDefault();
+    if (password === confirmPassword) {
+      console.log({ name, image, email, password });
+    }
   };
 
   return (
     <section className="bg-gray-100 min-h-screen flex flex-col">
       <div className="container max-w-lg mx-auto flex-1 flex flex-col items-center justify-center px-2">
-        <form onSubmit={handleChange}>
-          <div className="bg-white px-6 py-8 rounded shadow-lg text-black w-full">
+        <div className="bg-white px-6 py-8 rounded shadow-lg text-black w-full">
+          <form onSubmit={handleChange}>
             <h1 className="mb-8 text-3xl text-center">Sign up</h1>
             <div className="flex items-center gap-x-2 mb-3">
               <div className="h-[50px] w-[50px] rounded-full border">
@@ -71,6 +74,7 @@ const Register = () => {
                   type="file"
                   accept=".png, .jpg, .jpeg"
                   id="image"
+                  required
                 />
               </div>
             </div>
@@ -80,6 +84,7 @@ const Register = () => {
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="fullname"
               placeholder="Full Name"
+              required
             />
 
             <input
@@ -88,6 +93,7 @@ const Register = () => {
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="email"
               placeholder="Email"
+              required
             />
 
             <input
@@ -96,6 +102,7 @@ const Register = () => {
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="password"
               placeholder="Password"
+              required
             />
             <input
               onChange={(e) => setConfirmPassword(e.target.value)}
@@ -103,6 +110,7 @@ const Register = () => {
               className="block border border-grey-light w-full p-3 rounded mb-4"
               name="confirm_password"
               placeholder="Confirm Password"
+              required
             />
 
             <button
@@ -122,8 +130,8 @@ const Register = () => {
               </a>
               .
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </section>
   );
