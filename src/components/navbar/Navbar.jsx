@@ -4,18 +4,14 @@ import { IoMdNotifications } from "react-icons/io";
 const Navbar = () => {
   return (
     <nav>
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="mx-auto w-full">
         <div class="relative flex h-16 items-center justify-between">
           <div class="flex flex-1 items-center">
-            <div class=" sm:ml-6 sm:block">
-              <div class="flex space-x-4">
-                <a
-                  href="#"
-                  class=" text-black rounded-md px-3 py-2 text-2xl font-medium"
-                  aria-current="page"
-                >
+            <div>
+              <div>
+                <h2 class=" text-black rounded-md px-3 py-2 text-2xl font-medium">
                   Massages
-                </a>
+                </h2>
               </div>
             </div>
           </div>
@@ -27,8 +23,8 @@ const Navbar = () => {
               <IoMdNotifications />
             </button>
 
-            <div class="relative ml-3">
-              <div>
+            <div class="relative mx-3">
+              <div className="mr-6">
                 <button
                   type="button"
                   class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
