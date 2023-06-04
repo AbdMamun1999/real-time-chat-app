@@ -5,7 +5,7 @@ import ChatUsers from "../items/ChatUsers";
 
 const Sidebar = () => {
   return (
-    <section className="px-3 py-3 h-[100vh]">
+    <section className="px-3 py-3 h-[calc(100vh_-_66px)]">
       <div>
         <SearchBox />
       </div>

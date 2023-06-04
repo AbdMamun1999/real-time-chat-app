@@ -20,8 +20,9 @@ const Conversation = () => {
             <div className="col-span-4 border">
               <Sidebar />
             </div>
-            <div className="col-span-5 border">Chat bot</div>
-            <div className="col-span-3 border">Chat info</div>
+            <div className="col-span-8 border">
+              <h1>No Conversation here</h1>
+            </div>
           </div>
         </div>
       </div>
